@@ -1,9 +1,9 @@
 import streamlit as st
-from st_pages import show_pages_from_config, add_page_title
 
-add_page_title()
-
-show_pages_from_config()
+st.set_page_config(
+    page_title="Home",
+    page_icon="🏠"
+)
 
 st.markdown('# Main page')
 st.write("Hello, world!")
@@ -16,6 +16,6 @@ left_column.button("Press Me!")
 
 with right_column:
     chosen = st.radio(
-            'Sorting Hat',
-            ("Gryffindor", "Ravenclaw", "Hufflepuff", "Slytherin"))
+        'Sorting Hat',
+        ("Gryffindor", "Ravenclaw", "Hufflepuff", "Slytherin"))
     st.write("You are in {}".format(chosen))

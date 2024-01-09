@@ -1,9 +1,8 @@
 import streamlit as st
 from streamlit_extras.buy_me_a_coffee import button
 from streamlit_extras.let_it_rain import rain
-from st_pages import add_page_title
 
-add_page_title()
+st.set_page_config(page_title="About", page_icon="🦦")
 
 st.markdown("# About ")
 st.sidebar.markdown("# About ")
